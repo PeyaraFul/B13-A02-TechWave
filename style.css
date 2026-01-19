@@ -9,6 +9,32 @@
     border: none;
     color: white;
      background: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));  /*the color-gradient copied from pixco */
+     
+    animation: color-moving 0.8s ease-in-out infinite;
+
+}
+
+
+  
+
+
+@keyframes color-moving {
+  0% {
+   background: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
+  }
+  50%{
+    background: linear-gradient(47.64deg, rgba(251, 9, 180, 1),rgba(145, 0, 248, 1),rgba(251, 9, 180, 1));
+  }
+  100% {
+  background: linear-gradient(47.64deg, rgba(145, 0, 248, 1),rgba(247, 233, 63, 1),rgba(251, 9, 180, 1));
+  }
+}
+
+
+
+
+button{
+    cursor: pointer;
 }
 
 body{
@@ -32,13 +58,17 @@ nav>ul{
     list-style: none;
     gap: 2rem;
 }
+li>a{
+    color: white;
+    text-decoration: none;
+}
 nav>button{
     padding: 0.75rem 1rem;
     border-radius: 22px;
     font-weight: 600;
    
 }
-nav>img{
+.hamburger-icon{
     display: none; 
 }
 
@@ -83,7 +113,6 @@ h1{
     font-weight: bolder;
 }
 .banner>button{
-    background-color: aqua;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     margin-top: 2rem;
@@ -222,10 +251,12 @@ h1{
 /* meet the host section  */
 .the-host{
     margin: 0 12.5rem;
+    
 }
 .alex-kumar-container{
     background-color:  rgba(53, 17, 101, 0.4);
     padding: 3rem 2.5rem;
+    border-radius: 40px;
     display: flex;
     gap: 1.5rem;
 
@@ -285,7 +316,7 @@ footer{
         padding: 2.5rem 1.25rem;
         background-size: cover;
     }
-    nav>img{
+    .hamburger-icon{
         display: inline;
     }
     nav>ul{
